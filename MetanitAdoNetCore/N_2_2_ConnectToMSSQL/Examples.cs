@@ -56,5 +56,35 @@ namespace N_2_2_ConnectToMSSQL
             Console.WriteLine("Программа завершила работу.");
             Console.Read();
         }
+
+        /// <summary>
+        /// Получение информации о подключении
+        /// </summary>
+        public static async Task N_3_SlqConnectionInformation()
+        {
+            string connectionString = "Server=(localdb)\\mssqllocaldb;Database=master;Trusted_COnnection=true;";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+
+                Console.WriteLine("Подключение открыто");
+                
+                // Информация о подключении
+                Console.WriteLine("Свойства подключения:");
+
+                Console.WriteLine($"\tСтрока подключения: {connection.ConnectionString}");
+                Console.WriteLine($"\tБаза данных: {connection.Database}");
+                Console.WriteLine($"\tСервер: {connection.DataSource}");
+                Console.WriteLine($"\tВерсия сервера: {connection.ServerVersion}");
+                Console.WriteLine($"\tСостояние: {connection.State}");
+                Console.WriteLine($"\tWorkstationId: {connection.WorkstationId}");
+            }
+
+            Console.WriteLine("Подключение закрыто...");
+            Console.WriteLine("Программа завершила работу.");
+            
+            Console.Read();
+        }
     }
 }
