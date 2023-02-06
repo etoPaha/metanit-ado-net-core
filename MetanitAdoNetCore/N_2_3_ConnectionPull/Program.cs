@@ -7,7 +7,8 @@ namespace N_2_3_ConnectionPull
     {
         static async Task Main(string[] args)
         {
-            await Examples.N_1_FirstExample();
+            // await Examples.N_1_FirstExample();
+            await Examples.N_2_DifferentConnectionStrings();
         }
     }
 }
