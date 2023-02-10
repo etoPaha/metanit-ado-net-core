@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N_2_2_ConnectToMSSQL", "N_2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N_2_3_ConnectionPull", "N_2_3_ConnectionPull\N_2_3_ConnectionPull.csproj", "{97A08AC8-C015-4295-A405-F77E1EDFDADA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N_2_4_SqlCommand", "N_2_4_SqlCommand\N_2_4_SqlCommand.csproj", "{2FBF87EC-5688-4092-9550-1DBA72DD2517}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{97A08AC8-C015-4295-A405-F77E1EDFDADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97A08AC8-C015-4295-A405-F77E1EDFDADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97A08AC8-C015-4295-A405-F77E1EDFDADA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FBF87EC-5688-4092-9550-1DBA72DD2517}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FBF87EC-5688-4092-9550-1DBA72DD2517}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FBF87EC-5688-4092-9550-1DBA72DD2517}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FBF87EC-5688-4092-9550-1DBA72DD2517}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

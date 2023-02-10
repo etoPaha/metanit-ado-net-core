@@ -36,8 +36,8 @@ namespace N_2_3_ConnectionPull
         /// </summary>
         public static async Task N_2_DifferentConnectionStrings()
         {
-            string connectionString = "Server=(localdb)\\mssqllocaldb;Database=master;Trusted_Connection=true;";
-            string connectionString2 = "Server=(localdb)\\mssqllocaldb;Database=metanit_View;Trusted_Connection=true;";
+            string connectionString = "Server=localhost;Database=master;Trusted_Connection=true;TrustServerCertificate=true;";
+            string connectionString2 = "Server=localhost;Database=metanit_View;User=test;Password=123;TrustServerCertificate=true;";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
