@@ -56,5 +56,26 @@ namespace N_2_4_SqlCommand
 
             Console.Read();
         }
+
+        /// <summary>
+        /// Вставка данных
+        /// </summary>
+        public static async Task N_3_Example_InsertDataAsync()
+        {
+            string connectionString = "Server=localhost;Database=adonetdb;Truested_Connection=true;TrustServerSertificate=true;";
+            string sqlExpression = "INSERT INTO Users (Name, Age) VALUES ('Tom', 36)";
+            
+            await using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+
+                SqlCommand command = new SqlCommand(sqlExpression, connection);
+                int number = await command.ExecuteNonQueryAsync();
+
+                Console.WriteLine($"Добавлено объектов: {number}");
+            }
+
+            Console.Read();
+        }
     }
 }
