@@ -62,7 +62,7 @@ namespace N_2_4_SqlCommand
         /// </summary>
         public static async Task N_3_Example_InsertDataAsync()
         {
-            string connectionString = "Server=localhost;Database=adonetdb;Truested_Connection=true;TrustServerSertificate=true;";
+            string connectionString = "Server=localhost;Database=adonetdb;Trusted_Connection=true;TrustServerCertificate=true;";
             string sqlExpression = "INSERT INTO Users (Name, Age) VALUES ('Tom', 36)";
             
             await using (SqlConnection connection = new SqlConnection(connectionString))
@@ -72,6 +72,27 @@ namespace N_2_4_SqlCommand
                 SqlCommand command = new SqlCommand(sqlExpression, connection);
                 int number = await command.ExecuteNonQueryAsync();
 
+                Console.WriteLine($"Добавлено объектов: {number}");
+            }
+
+            Console.Read();
+        }
+
+        /// <summary>
+        /// Добавить несколько строк
+        /// </summary>
+        public static async Task N_4_Example_InsertFewLinesAsync()
+        {
+            var connectionString = "Server=localhost;Database=adonetdb;Trusted_Connection=true;TrustServerCertificate=true;";
+            var sqlExpression = "INSERT INTO Users (Name, Age) VALUES ('Alice', 32), ('Bob', 28)";
+
+            await using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+
+                SqlCommand command = new SqlCommand(sqlExpression, connection);
+                int number = await command.ExecuteNonQueryAsync();
+                
                 Console.WriteLine($"Добавлено объектов: {number}");
             }
 

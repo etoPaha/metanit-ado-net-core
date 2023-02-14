@@ -8,7 +8,8 @@ namespace N_2_4_SqlCommand
         {
             // await Examples.N_1_Example_CreateDatabaseAsync();
             // await Examples.N_2_Example_CreateTableAsync();
-            await Examples.N_3_Example_InsertDataAsync();
+            // await Examples.N_3_Example_InsertDataAsync();
+            await Examples.N_4_Example_InsertFewLinesAsync();
         }
     }
 }
