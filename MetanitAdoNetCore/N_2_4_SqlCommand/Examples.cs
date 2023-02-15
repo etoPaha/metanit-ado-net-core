@@ -98,5 +98,51 @@ namespace N_2_4_SqlCommand
 
             Console.Read();
         }
+
+        /// <summary>
+        /// Команда - UPDATE
+        ///
+        /// Обновить возраст
+        /// </summary>
+        public static async Task N_5_Example_UpdateAge()
+        {
+            var connectionString = "Server=localhost;Database=adonetdb;Trusted_Connection=true;TrustServerCertificate=true;";
+            var sqlExpression = "UPDATE Users SET Age = 30 WHERE Name = 'Tom'";
+
+            await using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+
+                SqlCommand command = new SqlCommand(sqlExpression, connection);
+                int numRows = await command.ExecuteNonQueryAsync();
+
+                Console.WriteLine($"Обновлено строк: {numRows}");
+            }
+
+            Console.Read();
+        }
+
+        /// <summary>
+        /// Команда - DELETE
+        ///
+        /// Удалить всех с именем Tom
+        /// </summary>
+        public static async Task N_6_Example_DeleteAsync()
+        {
+            var connectionString = "Server=localhost;Database=adonetdb;Trusted_Connection=true;TrustServerCertificate=true;";
+            var sqlExpression = "DELETE Users WHERE Name = 'Tom'";
+
+            await using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+
+                SqlCommand command = new SqlCommand(sqlExpression, connection);
+                int numRows = await command.ExecuteNonQueryAsync();
+
+                Console.WriteLine($"Удалено строк {numRows}");
+            }
+
+            Console.Read();
+        }
     }
 }
