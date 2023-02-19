@@ -144,5 +144,45 @@ namespace N_2_4_SqlCommand
 
             Console.Read();
         }
+
+        /// <summary>
+        /// Выполнение нескольких операций
+        /// </summary>
+        public static async Task N_7_Example_RunMultipleCommandsInARowAsync()
+        {
+            var connectionString = "Server=localhost;Database=adonetdb;Trusted_Connection=true;TrustServerCertificate=true;";
+            
+            Console.WriteLine("Введите имя:");
+            string name = Console.ReadLine();
+            
+            Console.WriteLine("Введите возрат:");
+            int age = Int32.Parse(Console.ReadLine());
+
+            string sqlExpressionInsert = $"INSERT INTO Users (Name, Age) VALUES ('{name}', {age})";
+
+            await using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+
+                // Добавление нового пользователя
+                SqlCommand command = new SqlCommand(sqlExpressionInsert, connection);
+                int insertedRows = await command.ExecuteNonQueryAsync();
+                
+                Console.WriteLine($"Добавлено объектов: {insertedRows}");
+                
+                // Обновление
+                Console.WriteLine("Введите новый возраст");
+                int newAge = Int32.Parse(Console.ReadLine());
+
+                var sqlExpressionUpdate = $"UPDATE Users SET Age = {newAge} WHERE Name = '{name}'";
+                command.CommandText = sqlExpressionUpdate;
+
+                int updatedRows = await command.ExecuteNonQueryAsync();
+                
+                Console.WriteLine($"Обновлено строк: {updatedRows}");
+            }
+
+            Console.Read();
+        }
     }
 }

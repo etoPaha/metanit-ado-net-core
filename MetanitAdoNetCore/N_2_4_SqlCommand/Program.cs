@@ -11,7 +11,8 @@ namespace N_2_4_SqlCommand
             // await Examples.N_3_Example_InsertDataAsync();
             // await Examples.N_4_Example_InsertFewLinesAsync();
             // await Examples.N_5_Example_UpdateAge();
-            await Examples.N_6_Example_DeleteAsync();
+            // await Examples.N_6_Example_DeleteAsync();
+            await Examples.N_7_Example_RunMultipleCommandsInARowAsync();
         }
     }
 }
