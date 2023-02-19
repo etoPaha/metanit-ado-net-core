@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N_2_3_ConnectionPull", "N_2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N_2_4_SqlCommand", "N_2_4_SqlCommand\N_2_4_SqlCommand.csproj", "{2FBF87EC-5688-4092-9550-1DBA72DD2517}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N_2_5_SqlDataReader", "N_2_5_SqlDataReader\N_2_5_SqlDataReader.csproj", "{3A1DED44-BD21-4A53-AF79-D09211061391}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{2FBF87EC-5688-4092-9550-1DBA72DD2517}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FBF87EC-5688-4092-9550-1DBA72DD2517}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FBF87EC-5688-4092-9550-1DBA72DD2517}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A1DED44-BD21-4A53-AF79-D09211061391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A1DED44-BD21-4A53-AF79-D09211061391}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A1DED44-BD21-4A53-AF79-D09211061391}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A1DED44-BD21-4A53-AF79-D09211061391}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
